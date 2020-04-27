@@ -37,10 +37,10 @@
 
     
     <ul class="sidenav side-style" id="mobile-links">
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#cv">CV</a></li>
+        <li><a href="/#contact">Contact</a></li>
         <div class="container">
             <div class="divider grey lighten-1"></div>
         </div>
@@ -102,64 +102,54 @@
         </div>
 
         <div class="row grey-text text-darken-3" style="text-align: left;">
-            <div class="col s12 l6" style="border-radius: 8px;">
-                <div class="card">
-                    <div class="card-content">
-                        <h4>Context</h4>
-                        <br>
-                        <p style=" font-size: large;">This game is an escape room style 3D game where the player must collect the character’s possessions 
-                            from around the room and leave. The game contains a variety of environmental storytelling elements that rely on niche context 
-                            and humour.<br>
-                            This game’s mechanics are inspired by slow paced narrative games like <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://gonehome.game/" target="_blank">Gone Home</a> and <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://www.thechineseroom.co.uk/games/everybodys-gone-to-the-rapture" target="_blank">Everybody's Gone to the Rapture</a>. However, 
-                            the theme of the game is mocking Todd Howard, Bethesda’s Creative Director and a nexus of internet meme activity.<br>
-                            The environmental assets for this game were created from scratch using Autodesk 3DS Max. Each object was also uniquely textured 
-                            using Substance Painter. As I had already made these assets, I considered building on the environment to create a large playing 
-                            space and give the player more to do, however I felt that expanding the area beyond one room did not offer enough opportunity to 
-                            improve on game mechanics to be worth the time needed to design additional assets. <br><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 l6">
-                <div class="card">
-                    <div class="card-content">
-                        <h4>Technical Stuff</h4>
-                        <br>
-                        <p style=" font-size: large;">The scripts for this game are very simple. The Item script is attached to every object the 
-                            player needs to collect, and checks whether the player is in the object’s collider. When the player is in the collider 
-                            the script displays a GUI element that prompts the player to pick the object up. When the player presses the appropriate
-                             key, the object is destroyed, and the relevant <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://fungusgames.com/" target="_blank">Fungus</a> block is executed. The Game Manager script checks that all the 
-                             objects have been collected before prompting the player to exit the room with another Fungus block and deleting the Game 
-                             Manager object.<br>
-                             The room environment is surrounded by a reverb zone using the “room” preset, this makes the audio elements played inside 
-                             the zone sound more like they’re coming from an interior space. The music coming from the desk area is set up with a 
-                             logarithmic rolloff that means it is audible throughout the whole room but gets quieter further from the source. 
-                             The music playing behind the door uses a linear roll off that gives it a smaller range.
-                            <br><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row grey-text text-darken-3" style="text-align: left;">
-            <div class="col s12 l12" style="border-radius: 8px;">
-                <div class="card">
-                    <div class="card-content">
-                        <h4>Reflection</h4>
-                        <br>
-                        <p style=" font-size: large;">I feel that as a piece of satire this game is very successful, 
-                            however as a narrative experience it doesn’t meet the standard that I aspire to. I think 
-                            had there been time to recover my lost original project the narrative I had planned for it would 
-                            have better suited the requirements. I also feel that the room could benefit from more interactivity 
-                            beyond the essential items. I do think that this game reaches a high level of visual polish, due to all 
-                            the models and textures being based off real life objects.<br><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col s12 l12">
+                <ul class="collapsible" style="border-width: 0px;">
+                    <li class="active">
+                        <div class="collapsible-header"><div class="container"><h4>Context</h4></div></div>
+                        <div class="collapsible-body grey lighten-2">
+                            <p style=" font-size: large;">This game is an escape room style 3D game where the player must collect the character’s possessions 
+                                from around the room and leave. The game contains a variety of environmental storytelling elements that rely on niche context 
+                                and humour.<br>
+                                This game’s mechanics are inspired by slow paced narrative games like <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://gonehome.game/" target="_blank">Gone Home</a> and <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://www.thechineseroom.co.uk/games/everybodys-gone-to-the-rapture" target="_blank">Everybody's Gone to the Rapture</a>. However, 
+                                the theme of the game is mocking Todd Howard, Bethesda’s Creative Director and a nexus of internet meme activity.<br>
+                                The environmental assets for this game were created from scratch using Autodesk 3DS Max. Each object was also uniquely textured 
+                                using Substance Painter. As I had already made these assets, I considered building on the environment to create a large playing 
+                                space and give the player more to do, however I felt that expanding the area beyond one room did not offer enough opportunity to 
+                                improve on game mechanics to be worth the time needed to design additional assets.
+                            </p>
+                        </div>
+                    </li>
+                    <br>
+                    <li class="">
+                        <div class="collapsible-header"><div class="container"><h4>Mechanics</h4></div></div>
+                        <div class="collapsible-body grey lighten-2">
+                            <p style=" font-size: large;">The scripts for this game are very simple. The Item script is attached to every object the 
+                                player needs to collect, and checks whether the player is in the object’s collider. When the player is in the collider 
+                                the script displays a GUI element that prompts the player to pick the object up. When the player presses the appropriate
+                                 key, the object is destroyed, and the relevant <a class="grey-text text-darken-3" style="text-decoration: underline;" href="https://fungusgames.com/" target="_blank">Fungus</a> block is executed. The Game Manager script checks that all the 
+                                 objects have been collected before prompting the player to exit the room with another Fungus block and deleting the Game 
+                                 Manager object.<br>
+                                 The room environment is surrounded by a reverb zone using the “room” preset, this makes the audio elements played inside 
+                                 the zone sound more like they’re coming from an interior space. The music coming from the desk area is set up with a 
+                                 logarithmic rolloff that means it is audible throughout the whole room but gets quieter further from the source. 
+                                 The music playing behind the door uses a linear roll off that gives it a smaller range.
+                            </p>
+                        </div>
+                    </li>
+                    <br>
+                    <li class="">
+                        <div class="collapsible-header"><div class="container"><h4>Reflection</h4></div></div>
+                        <div class="collapsible-body grey lighten-2">
+                            <p style=" font-size: large;">I feel that as a piece of satire this game is very successful, 
+                                however as a narrative experience it doesn’t meet the standard that I aspire to. I think 
+                                had there been time to recover my lost original project the narrative I had planned for it would 
+                                have better suited the requirements. I also feel that the room could benefit from more interactivity 
+                                beyond the essential items. I do think that this game reaches a high level of visual polish, due to all 
+                                the models and textures being based off real life objects.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
         
     </section>
 
@@ -189,6 +179,7 @@
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
         });
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
