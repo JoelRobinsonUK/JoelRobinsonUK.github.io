@@ -197,62 +197,62 @@
                         </p>
 
                         <div class="row">
-                                <p>
-                                    After settling on a JavaScript based application we realised that Ben was the only
-                                    member of
-                                    the team who had sufficient experience with it, so we made the switch to Unity so I
-                                    could be
-                                    more useful.
-                                    <br><br>
-                                    I took Nishesh’s prototype designs and built a UI in Unity that matched it. I
-                                    ensured that
-                                    the interface allowed the user to input a name for their main character as well as a
-                                    few key
-                                    traits they have. Later we decided it would be easier to just have one positive and
-                                    one
-                                    negative trait, so changed that.
-                                    <br><br>
-                                </p>
+                            <p>
+                                After settling on a JavaScript based application we realised that Ben was the only
+                                member of
+                                the team who had sufficient experience with it, so we made the switch to Unity so I
+                                could be
+                                more useful.
+                                <br><br>
+                                I took Nishesh’s prototype designs and built a UI in Unity that matched it. I
+                                ensured that
+                                the interface allowed the user to input a name for their main character as well as a
+                                few key
+                                traits they have. Later we decided it would be easier to just have one positive and
+                                one
+                                negative trait, so changed that.
+                                <br><br>
+                            </p>
 
-                                <div class="row">
-                                    <div class="col s12 l8 offset-l2">
-                                        <div class="card grey darken-4">
-                                            <div class="card-image">
-                                                <img src="./images/blog/protag.jpg" alt="">
-                                            </div>
-                                            <div class="card-content white-text">
-                                                <p style="font-size: small">Main character page</p>
-                                            </div>
-        
+                            <div class="row">
+                                <div class="col s12 l8 offset-l2">
+                                    <div class="card grey darken-4">
+                                        <div class="card-image">
+                                            <img src="./images/blog/protag.jpg" alt="">
                                         </div>
+                                        <div class="card-content white-text">
+                                            <p style="font-size: small">Main character page</p>
+                                        </div>
+
                                     </div>
                                 </div>
+                            </div>
 
-                                <p>
-                                    I animated the interface using LeanTween, an asset from the Unity asset store, to
-                                    give it a
-                                    little bit more initial polish.
-                                    <br><br>
-                                    Because we’re no longer using a web based approach it will take more work to make
-                                    the app
-                                    look polished, so Wik has been assigned the task of creating some assets.
-                                    <br><br>
+                            <p>
+                                I animated the interface using LeanTween, an asset from the Unity asset store, to
+                                give it a
+                                little bit more initial polish.
+                                <br><br>
+                                Because we’re no longer using a web based approach it will take more work to make
+                                the app
+                                look polished, so Wik has been assigned the task of creating some assets.
+                                <br><br>
 
-                                </p>
+                            </p>
 
-                                <div class="row">
-                                    <div class="col s12 l8 offset-l2">
-                                        <div class="card grey darken-4">
-                                            <div class="card-image">
-                                                <img src="./images/blog/main.jpg" alt="">
-                                            </div>
-                                            <div class="card-content white-text">
-                                                <p style="font-size: small">The core page of the app</p>
-                                            </div>
-        
+                            <div class="row">
+                                <div class="col s12 l8 offset-l2">
+                                    <div class="card grey darken-4">
+                                        <div class="card-image">
+                                            <img src="./images/blog/main.jpg" alt="">
                                         </div>
+                                        <div class="card-content white-text">
+                                            <p style="font-size: small">The core page of the app</p>
+                                        </div>
+
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
 
@@ -372,6 +372,49 @@
                             the user with constraints to their own narrative.
 
                             <br></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col s12 l12">
+                <div class="card">
+
+                    <div class="card-content">
+                        <span class="card-title left" style="font-weight: 700; font-size: xx-large;">Line
+                            Rendering</span>
+                        <br><br><br>
+                        <p>
+                            To draw the lines between nodes I had to use the open source UnityUIExtensions project, as
+                            Unity’s existing LineRenderer component is designed for 3D space rather than for use with
+                            the UI.
+                            <br><br>
+                            The UI Extensions library included a line renderer component that I attached to a prefab
+                            object. For each node that is activated when the user presses generate a new instance of
+                            this object is created and the start/end points of the line are set to the position of the
+                            new node, and the position of another randomly selected node.
+                            <br><br>
+                            If the newly activated node is in the first layer of separation then the line is set to
+                            connect it to the protagonist. This part was easy to implement and I had aimed to have nodes
+                            in the second layer only link to those in the first (and nodes in the third layer to the
+                            second and so on), however it was difficult once the nodes were activated to define which
+                            ones belonged to which layer.
+                            <br><br>
+                            There is an issue where some lines will draw through other nodes on the way to their
+                            destination, this was slightly assuaged by positioning the container object I created for
+                            the lines behind the one for the nodes in draw order. It still doesn’t look great and I
+                            looked into ways of connecting only nodes within a certain distance from one another, but
+                            couldn’t find a serviceable solution.
+                            <br><br>
+                            I have also been unable to find how to change the colour of lines created using
+                            UnityUIExtensions, as the traditional Unity method of accessing the object’s mesh renderer
+                            does not apply.
+                            <br><br>
+                            This part of the project has by far been the most fraught, as there are problems with the
+                            lines generated not being hidden by the UI mask on the display panel (which is meant to keep
+                            all the generated content neatly contained), and with some nodes not getting any connections
+                            at all.
+                            <br><br></p>
                     </div>
 
                 </div>
