@@ -71,6 +71,18 @@
 
         <div class="container">
 
+
+
+            <div class="container">
+                <iframe src="https://itch.io/embed/800459" height="167" width="552" frameborder="0">
+                    <a href="https://joel-robinson.itch.io/character-relationship-generator">Character Relationship
+                        Generator by Joel Robinson
+                    </a>
+                </iframe>
+            </div>
+
+            <br>
+
             <div class="col s12 l12">
                 <div class="card">
 
@@ -95,6 +107,8 @@
 
                 </div>
             </div>
+
+            <br>
 
             <div class="col s12 l12">
                 <div class="card">
@@ -186,6 +200,8 @@
                 </div>
             </div>
 
+            <br>
+
             <div class="col s12 l12">
                 <div class="card">
 
@@ -259,6 +275,8 @@
                 </div>
             </div>
 
+            <br>
+
             <div class="col s12 l12">
                 <div class="card">
 
@@ -291,6 +309,8 @@
 
                 </div>
             </div>
+
+            <br>
 
             <div class="col s12 l12">
                 <div class="card">
@@ -377,6 +397,8 @@
                 </div>
             </div>
 
+            <br>
+
             <div class="col s12 l12">
                 <div class="card">
 
@@ -406,14 +428,134 @@
                             looked into ways of connecting only nodes within a certain distance from one another, but
                             couldn’t find a serviceable solution.
                             <br><br>
-                            I have also been unable to find how to change the colour of lines created using
-                            UnityUIExtensions, as the traditional Unity method of accessing the object’s mesh renderer
-                            does not apply.
+                            For reasons I have been unable to identify UnityUIExtensions doesn’t allow lines to have
+                            their colours changed beyond very rudimentary RGB values such as 255,0,0. This makes the
+                            lines look garish and will complicate matters if we decide on a certain colour palette for
+                            the tool that doesn't play well with pure bright red and green.
                             <br><br>
                             This part of the project has by far been the most fraught, as there are problems with the
                             lines generated not being hidden by the UI mask on the display panel (which is meant to keep
                             all the generated content neatly contained), and with some nodes not getting any connections
                             at all.
+                            <br><br></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+            <div class="col s12 l12">
+                <div class="card">
+
+                    <div class="card-content">
+                        <span class="card-title left" style="font-weight: 700; font-size: xx-large;">Further Development
+                            Ideas</span>
+                        <br><br><br>
+                        <p>
+                            Throughout the process of developing this tool we discussed a number of possible features
+                            that could be implemented but weren’t a priority and would require a lot more development
+                            time.
+                            <br><br>
+                            The most significant of these in terms of making the tool as valuable as possible is saving.
+                            Allowing users to access their previous character generations and edit them if need be would
+                            make the tool more useful beyond the planning stages of narrative development.
+                            <br><br>
+                            The most logical approach would be to have save files that the user can access via the tool;
+                            however this would require the use of user authentication and expansion of our database, as
+                            the tool is currently only accessible via browser.
+                            <br><br>
+                            Alternatively we could export the data from the tool as a standalone file. If we took this
+                            approach I would look to have the exported file be accessible independently from the tool,
+                            for example the web of characters could be shown via an image file. If the details included
+                            with the characters prove useful and popular with users we would likely have to create a
+                            file that can be read back into the tool at a later time so that those details can once
+                            again be displayed.
+                            <br><br>
+                            Early on we also discussed the possibility of having different genres for the user to choose
+                            from, each with appropriate names and traits for the characters. In addition to these
+                            surface level changes we could also begin to explore different kinds of relationship
+                            connections with more nuance depending on genre tropes (for example the inclusion of an
+                            older mentor figure in fantasy and science fiction, ie Gandalf or Obi-Wan).
+                            <br><br>
+                            I feel that generating webs in this way would create much more organic, unique assistance to
+                            the user.
+
+                            <br><br></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+            <div class="col s12 l12">
+                <div class="card">
+
+                    <div class="card-content">
+                        <span class="card-title left" style="font-weight: 700; font-size: xx-large;">Critical
+                            Reflection</span>
+                        <br><br><br>
+
+                        <h5><i>Concept</i></h5>
+
+                        <p>
+                            The tool as it currently exists is a good proof of concept for an original concept. The idea
+                            has practical value to the intended audience of writers and narrative designers, and if we
+                            were to continue with development and promotion I expect it would get reasonable support.
+
+                        </p>
+                        <br>
+                        <h5><i>Team Contribution</i></h5>
+
+                        <p>
+                            This project was not well suited to a group of this size. While myself and Ben were able to
+                            contribute quite significantly on the front and back end respectively Nishesh and Wiktor had
+                            little to do through no fault of their own.
+                            <br><br>
+                            Nishesh’s experience with UX/UI were essential for me to be able to create a usable
+                            interface but after his initial high fidelity prototype his work had little bearing on the
+                            tool. Similarly Wiktor was very good in the early stages of the project at critically
+                            reviewing the ideas we came up with and helped to narrow down the scope of our work early
+                            on.
+                            <br><br>
+                            I was only able to contribute as much as I did after we made the decision to use Unity, if
+                            we had stuck with our plan to develop the front end in HTML and Javascript Ben would have
+                            likely been the only contributor to this project. His work on the back end database is
+                            probably one of the most valuable parts of the project, as it allows the content within the
+                            tool to expand dynamically with the inclusion of new names.
+                            <br><br>
+                            As a team I feel we took a while to get the ball rolling on the project and so lost some
+                            valuable development time, however once we got moving we did well avoiding scope creep which
+                            could have quickly over encumbered the original concept.
+                            <br><br>
+                            We could have communicated more effectively over the course of the project, not just in
+                            terms of frequency but in terms of thoroughly explaining what we envisioned for the project.
+                            Though I can’t be certain I am confident that throughout development everyone has had a
+                            different idea of how the tool is intended to work.
+
+                        </p>
+                        <br>
+                        <h5><i>Personal Contribution</i></h5>
+
+                        <p>
+                            For the most part I feel I did justice to the concept I presented to the team at the
+                            Hackathon. I had hoped to take this opportunity to expand my knowledge of Javascript by
+                            developing the front end in HTML canvas, but practically my existing knowledge of these
+                            tools would have resulted in a much poorer outcome for the project. I played well to my
+                            strengths in Unity and am happy with how quickly I was able to produce the current visuals.
+                            <br><br>
+                            However I think a lot of the ways I implemented functionality are faulty and short sighted.
+                            I had initially aimed for the generation of nodes to be procedural, and I think now I should
+                            have persevered with this line of thought rather than creating preplaced nodes. That
+                            decision has resulted in the outcome feeling slightly limited, as I could only get two rings
+                            of nodes ready.
+                            <br><br>
+                            Ultimately I think I made a good contribution to the project and I am content with the
+                            outcome as a proof of concept. I would enjoy further developing the character relationship
+                            tool later on, as I feel it has value to all kinds of creatives.
+
+
                             <br><br></p>
                     </div>
 
