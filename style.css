@@ -87,3 +87,15 @@ div#unityContainer {
   .side-style{
     background-color: grey;
   }
+
+  .portfolio{
+    overflow: hidden;
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    
+  }
+
+  .base{
+    opacity: 80%;
+  }
