@@ -23,18 +23,19 @@
     <header class="navbar-fixed">
         <nav class="nav-wrapper z-depth-3" style="background-color: #1e0f30;">
             <div class="container">
-                <a href="#" onclick="show('home')" class="brand-logo hide-on-med-and-down"><span style="font-weight: 300;">Joel
+                <a href="#" onclick="show('home')" class="brand-logo hide-on-med-and-down"><span
+                        style="font-weight: 300;">Joel
                         Robinson</span><span style="font-weight: 100;"> | Game Developer</span></a>
-                <a href="#" onclick="show('home')" class="brand-logo hide-on-large-only"><span style="font-weight: 300; font-size: large;">Joel
+                <a href="#" onclick="show('home')" class="brand-logo hide-on-large-only"><span
+                        style="font-weight: 300; font-size: large;">Joel
                         Robinson</span><span class="hide-on-small-only" style="font-weight: 100; font-size: large;"> |
                         Game Developer</span></a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="fas fa-bars"></i>
                 </a>
                 <ul class="right hide-on-med-and-down" style="font-weight: 100;">
-                    <li><a onclick="show('about')">About</a></li>
+                    <li><a onclick="show('home')">About</a></li>
                     <li><a onclick="show('cv')">CV</a></li>
-                    <li><a onclick="show('contact')">Contact</a></li>
                 </ul>
             </div>
 
@@ -190,34 +191,22 @@
         </div>
 
         <div class="col s12 l8 offset-l3">
+            <br>
 
-            <div class="card grey lighten-2" style="display: block;" id="home">
-                
-                <div class="row grey-text text-darken-3">
-                    <div class="col s12 l6">
-                        <div class="container">
-                            <span style="font-weight: 300; font-size: xxx-large;">Joel Robinson</span>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="card grey lighten-2" style="display: none;" id="about">
+            <div class="card" style="display: block; background-color: rgba(220, 220, 220, 0.9);" id="home">
                 <section class="container section scrollspy" id="about">
 
                     <div class="row center">
-                        <h2>About</h2>
+                        <h2>About Me</h2>
                     </div>
 
                     <div class="row grey-text text-darken-3">
                         <div class="col s12 l6">
-                            <h4>Where I'm At</h4>
-                            <p style=" font-size: large;">I’m currently an undergraduate at Bath Spa University,
+                            <p style=" font-size: large;">I’m currently an postgraduate at Bath Spa University,
                                 building a
                                 diverse skill set in development
-                                not only in terms of games but also in broader design work.
-                                Over the last two years I have developed a small portfolio that you can look over here.
+                                not only in games but also in broader design work.
+                                Over the three years of my bachelors degree I have developed a small portfolio that you can look over here.
                             </p>
 
                         </div>
@@ -229,7 +218,7 @@
                         <div class="col s2 l1"></div>
                     </div>
 
-                    <div class="row">
+                    <div class="row grey-text text-darken-3">
                         <div class="col s12 l12">
                             <p style=" font-size: large;">In my time at university I've become familiar with the
                                 workings of
@@ -241,208 +230,189 @@
                             </p>
                         </div>
 
-                    </div>
-                    <div class="row grey-text text-darken-3">
-                        <div class="col s12 l6">
-                            <h4>What I'm Doing</h4>
-                            <p style=" font-size: large;">My main ongoing project is the development of a 2D side
-                                scroller that
-                                I prototyped at the beginning of my second year.
-                                My goal is to have the game ready to release on Android after I graduate in 2020.
-                            </p>
-
+                        <div class="col s12 hide-on-med-and-up center">
+                            <br>
+                            <a class="purple-text text-darken-3" onclick="show('cv')"><h4>See my CV</h4></a>
                         </div>
-                        <div class="col s12 l6">
-                            <h4>What I'm Looking For</h4>
-                            <p style=" font-size: large;">I want to be part of a small team where I'm able to pitch in
-                                across
-                                all aspects of development,
-                                working on projects that focus on creating smaller-scale products with a higher level of
-                                polish.
-                            </p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12 l12">
+                                <br><br>
+                                <div class="divider grey lighten-1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class=" col s6 l3">
+                            <a href="https://twitter.com/joelrobinson_uk" target="_blank">
+                                <div class="card z-depth-0" style="background-color: rgba(0, 0, 0, 0);">
+                                    <div class="card-image">
+                                        <i class="fab fa-twitter" style="color: #2aaaf4; font-size: xxx-large;"></i>
+                                    </div>
+                                    <div class="card-content black-text">@joelrobinson_uk</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class=" col s6 l3">
+                            <a href="https://www.linkedin.com/in/joelrobinson-uk/" target="_blank">
+                                <div class="card z-depth-0" style="background-color: rgba(0, 0, 0, 0);">
+                                    <div class="card-image">
+                                        <i class="fab fa-linkedin-in" style="color: #0073b0; font-size: xxx-large;"></i>
+                                    </div>
+                                    <div class="card-content black-text">joelrobinson-uk</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class=" col s6 l3">
+                            <a href="https://joel-robinson.itch.io/" target="_blank">
+                                <div class="card z-depth-0" style="background-color: rgba(0, 0, 0, 0);">
+                                    <div class="card-image">
+                                        <i class="fab fa-itch-io" style="color: #fa5c5c; font-size: xxx-large;"></i>
+                                    </div>
+                                    <div class="card-content black-text">joel-robinson</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class=" col s6 l3">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joelsgrobinson@gmail.com" target="_blank">
+                                <div class="card z-depth-0" style="background-color: rgba(0, 0, 0, 0);">
+                                    <div class="card-image">
+                                        <i class="fas fa-envelope" style="color: #6a1b9a; font-size: xxx-large;"></i>
+                                    </div>
+                                    <div class="card-content black-text">joelsgrobinson <br> @gmail.com</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                 </section>
-                
+
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="cv">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="cv">
                 <section class="container section scrollspy">
-                <div class="row center">
-                    <h2>CV</h2>
-                </div>
+                    <div class="row center">
+                        <h2>CV</h2>
+                    </div>
 
-                <div class="row grey-text text-darken-3" style="text-align: left;">
-                    <div class="col s12 l5">
-                        <h4>Education</h4>
+                    <div class="row grey-text text-darken-3" style="text-align: left;">
+                        <div class="col s12 l5">
+                            <h4>Education</h4>
+                            <br>
+                            <span>BSc Creative Computing (2020) </span><br><span style="font-weight: 100;">Bath Spa
+                                University</span>
+                            <br><br>
+                            <p style=" font-size: large;">This degree course was designed to provide me with a versatile
+                                skillset
+                                that would bridge the gap between creative and technical elements of development.
+                                Over my time at Bath Spa I developed strong collaborative skills and experience
+                                in most aspects of the development pipeline.<br><br>
+                            </p>
+                        </div>
+                        <div class="col s12 l5 offset-l2">
+                            <h4>Experience</h4>
+                            <br>
+                            <span>Student Class Assistant </span><br><span style="font-weight: 100;">Oct 2018 - Jan
+                                2020</span>
+                            <br><br>
+                            <p style=" font-size: large;">In my second and third years of university I worked as a
+                                classroom
+                                assistant for the core coding module of the course for the cohort below mine.
+                                This role gave me the experience of being able to describe coding syntax and concepts to
+                                others
+                                clearly, a skill that will be invaluable in projects with multiple programmers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row grey-text text-darken-3 center">
+                        <h3 class="" style="font-weight: 500;">Skills</h3>
+                        <div class="col s12 l4">
+                            <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
+                                <div class="card-content center">
+                                    <h4>Software</h4>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Unity</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">GitHub</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">3DS Max</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Construct 3</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Substance Painter</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 l4">
+                            <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
+                                <div class="card-content center">
+                                    <h4>Languages</h4>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">C#</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">C++</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">CSS</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">HTML5</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 l4">
+                            <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
+                                <div class="card-content center">
+                                    <h4>Personal</h4>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Agile</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Team Player</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Quick Learner</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Lateral Thinking</span>
+                                    <br>
+                                    <span style="font-weight: 300; font-size: large;">Team Management</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row center">
                         <br>
-                        <span>BSc Creative Computing (2020) </span><br><span style="font-weight: 100;">Bath Spa
-                            University</span>
-                        <br><br>
-                        <p style=" font-size: large;">This degree course was designed to provide me with a versatile
-                            skillset
-                            that would bridge the gap between creative and technical elements of development.
-                            Over my time at Bath Spa I developed strong collaborative skills and experience
-                            in most aspects of the development pipeline.<br><br>
-                        </p>
-                    </div>
-                    <div class="col s12 l5 offset-l2">
-                        <h4>Experience</h4>
-                        <br>
-                        <span>Student Class Assistant </span><br><span style="font-weight: 100;">Oct 2018 - Jan
-                            2020</span>
-                        <br><br>
-                        <p style=" font-size: large;">In my second and third years of university I worked as a
-                            classroom
-                            assistant for the core coding module of the course for the cohort below mine.
-                            This role gave me the experience of being able to describe coding syntax and concepts to
-                            others
-                            clearly, a skill that will be invaluable in projects with multiple programmers.
-                        </p>
-                    </div>
-                </div>
+                        <a class="grey-text text-darken-3" href="./files/Joel Robinson CV.pdf" download>
+                            <i class="fas fa-cloud-download-alt" style="font-size: xx-large;"></i>
+                            <span style="font-weight: 700; font-size: x-large; text-decoration: underline;">Download my
+                                full
+                                CV</span>
+                        </a>
 
-                <div class="row grey-text text-darken-3 center">
-                    <h3 class="" style="font-weight: 500;">Skills</h3>
-                    <div class="col s12 l4">
-                        <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
-                            <div class="card-content center">
-                                <h4>Software</h4>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Unity</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">GitHub</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">3DS Max</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Construct 3</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Substance Painter</span>
-
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="col s12 l4">
-                        <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
-                            <div class="card-content center">
-                                <h4>Languages</h4>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">C#</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">C++</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">CSS</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">HTML5</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 l4">
-                        <div class="card white-text" style="background-color: #45364b; border-radius: 8px;">
-                            <div class="card-content center">
-                                <h4>Personal</h4>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Agile</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Team Player</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Quick Learner</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Lateral Thinking</span>
-                                <br>
-                                <span style="font-weight: 300; font-size: large;">Project Management</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="row center">
-                    <br>
-                    <a class="grey-text text-darken-3" href="./files/Joel Robinson CV.pdf" download>
-                        <i class="fas fa-cloud-download-alt" style="font-size: xx-large;"></i>
-                        <span style="font-weight: 700; font-size: x-large; text-decoration: underline;">Download my
-                            full
-                            CV</span>
-                    </a>
-
-                </div>
-
-            </section>
+                </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="contact">
-                <section class="container section scrollspy" id="contact">
-                <div class="row center">
-                    <h2>Contact</h2>
-                </div>
 
-                <div class="row grey-text text-darken-3">
-                    <div class="col s12 l6">
-                        <a href="https://twitter.com/joelrobinson_uk" target="_blank">
-                            <div class="card z-depth-3" style="border-radius: 8px;">
-                                <div class="card-content">
-                                    <i class="fab fa-twitter" style="color: #2aaaf4; font-size: x-large;"></i>
-                                    <span class="grey-text text-darken-3 hide-on-med-and-down"
-                                        style="font-weight: 100;">twitter</span>
-                                    <span class="grey-text text-darken-3 right">@joelrobinson_uk</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/joelrobinson-uk/" target="_blank">
-                            <div class="card z-depth-3" style="border-radius: 8px;">
-                                <div class="card-content">
-                                    <i class="fab fa-linkedin-in" style="color: #0073b0; font-size: x-large;"></i>
-                                    <span class="grey-text text-darken-3 hide-on-med-and-down"
-                                        style="font-weight: 100;">linkedin</span>
-                                    <span class="grey-text text-darken-3 right">joelrobinson-uk</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col s12 l6">
-                        <a href="https://joel-robinson.itch.io/" target="_blank">
-                            <div class="card z-depth-3" style="border-radius: 8px;">
-                                <div class="card-content">
-                                    <i class="fab fa-itch-io" style="color: #fa5c5c; font-size: x-large;"></i>
-                                    <span class="grey-text text-darken-3 hide-on-med-and-down"
-                                        style="font-weight: 100;">itch.io</span>
-                                    <span class="grey-text text-darken-3 right">joel-robinson</span>
-
-                                </div>
-                            </div>
-                        </a>
-
-                        <div class="card z-depth-3" style="border-radius: 8px;">
-                            <div class="card-content">
-                                <i class="fas fa-envelope" style="color: #6a1b9a; font-size: x-large;"></i>
-                                <span class="grey-text text-darken-3 hide-on-med-and-down"
-                                    style="font-weight: 100;">email</span>
-                                <span class="grey-text text-darken-3 right">joelsgrobinson@gmail.com</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-            </div>
-
-            
-
-            <div class="card grey lighten-2" style="display: none;" id="monsterfactory">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="monsterfactory">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/monster factory.png" alt="">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
-                <section class=" container section scrollspy center">
+
+                <div class="card-content container scrollspy center">
 
 
 
@@ -704,12 +674,18 @@
                                 </li>
                             </ul>
 
-                </section>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="calling">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="calling">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/calling.png" alt="">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Construct 3">
+                        <img class="responsive-img center" src="./images/Construct.png">
+                    </button>
                 </div>
                 <section class="container section center scrollspy">
 
@@ -1057,9 +1033,13 @@
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="geoffbozo">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="geoffbozo">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/geoff.png" alt="Geoff Bozo Simulator splash">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container section scrollspy" id="">
@@ -1252,9 +1232,13 @@
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="vrcade">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="vrcade">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/vrcade.png" alt="VRcade Title">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container" id="">
@@ -1353,9 +1337,13 @@
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="moonbasezeta">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="moonbasezeta">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/moon.png" alt="Moon Base Zeta Title">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container" id="">
@@ -1453,9 +1441,13 @@
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="troublesbrewing">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="troublesbrewing">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/trouble.png" alt="Trouble's Brewing Title">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container section scrollspy" id="">
@@ -1464,7 +1456,7 @@
                         <br>
                         <a class="purple-text text-darken-3" href="https://disasteriskstudios.itch.io/monster-factory"
                             target="_blank">
-                            <i class="fab fa-itch-io medium"></i><span class="" style="font-size: xx-large;">Download
+                            <i class="fas fa-cloud-download-alt" style="font-size: xx-large;"></i></i><span class="" style="font-size: xx-large;"> Download
                                 GDD</span>
                         </a>
                         <br><br>
@@ -1693,18 +1685,22 @@
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="porkypredicament">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="porkypredicament">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/shaun.png" alt="Shaun the Sheep title">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container section scrollspy" id="">
 
                     <div class="row center">
                         <br>
-                        <a class="purple-text text-darken-3" href="./files/Shaun the Sheep A Porky Predicament Game Design Document.pdf"
-                            target="_blank">
-                            <i class="fab fa-itch-io medium"></i><span class="" style="font-size: xx-large;">Download
+                        <a class="purple-text text-darken-3"
+                            href="./files/Shaun the Sheep A Porky Predicament Game Design Document.pdf" target="_blank">
+                            <i class="fas fa-cloud-download-alt" style="font-size: xx-large;"></i></i><span class="" style="font-size: xx-large;"> Download
                                 GDD</span>
                         </a>
                         <br><br>
@@ -1712,32 +1708,38 @@
 
                     <div class="row center grey-text text-darken-3">
                         <span>Check out one of my teammates from this project: <a class="grey-text text-darken-4"
-                                style="text-decoration: underline;" href="https://sites.google.com/view/ashbridgeindustries"
-                                target="_blank">Saul Ashbridge</a></span>
+                                style="text-decoration: underline;"
+                                href="https://sites.google.com/view/ashbridgeindustries" target="_blank">Saul
+                                Ashbridge</a></span>
                         <br><br>
                     </div>
-        
+
                     <div class="row grey-text text-darken-3" style="text-align: left;">
                         <div class="col s12 l6" style="border-radius: 8px;">
-                            <p style=" font-size: large;">In this industry-based assessment, I worked as part of team to deliver
+                            <p style=" font-size: large;">In this industry-based assessment, I worked as part of team to
+                                deliver
                                 a prototype
-                                mobile game to the games team at Aardman Animations. I was heavily involved with developing the
+                                mobile game to the games team at Aardman Animations. I was heavily involved with
+                                developing the
                                 early concept,
-                                as well as scripting the UI and hooking it into the game mechanics. This prototype was presented
+                                as well as scripting the UI and hooking it into the game mechanics. This prototype was
+                                presented
                                 at a showcase
                                 at the Bristol VR Lab where it was well received by Aardman.<br>
-                                Aardman tasked us with developing a casual game promoting the upcoming series of Shaun the
+                                Aardman tasked us with developing a casual game promoting the upcoming series of Shaun
+                                the
                                 Sheep.
-                                Our concept for this was a farm themed tower defense game for mobile and tablet platforms,
+                                Our concept for this was a farm themed tower defense game for mobile and tablet
+                                platforms,
                                 featuring the
                                 characters of the show facing off against their frequent antagonists: the pigs.<br><br>
                             </p>
                         </div>
-        
+
                         <div class="col s12 l6">
                             <div class="carousel carousel-slider center grey lighten-2">
-                                <a class="carousel-item" href="#one!"><img class="center" style="height: 100%; width: auto;"
-                                        src="../images/screenshots/Shaun1.jpg"></a>
+                                <a class="carousel-item" href="#one!"><img class="center"
+                                        style="height: 100%; width: auto;" src="../images/screenshots/Shaun1.jpg"></a>
                                 <a class="carousel-item" href="#two!"><img style="height: 100%; width: auto;"
                                         src="../images/screenshots/Shaun2.jpg"></a>
                                 <a class="carousel-item" href="#three!"><img style="height: 100%; width: auto;"
@@ -1748,15 +1750,15 @@
                                         src="../images/screenshots/Shaun5.png"></a>
                             </div>
                             <div class="card">
-        
+
                                 <div class="card-content">
                                     <p>A few screenshots from the prototype we presented at the Bristol VR Lab.</p>
                                 </div>
                             </div>
-        
+
                         </div>
                     </div>
-        
+
                     <div class="row grey-text text-darken-3" style="text-align: left;">
                         <div class="col s12 l12" style="border-radius: 8px;">
                             <ul class="collapsible z-depth-0" style="border-width: 0px;">
@@ -1768,18 +1770,23 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">In the run up to our pitching session at Aardman I was
+                                        <p style=" font-size: large;">In the run up to our pitching session at Aardman I
+                                            was
                                             responsibe for researching the mechanics
-                                            of popular tower defense games and picking out the ones that would fit well with our
+                                            of popular tower defense games and picking out the ones that would fit well
+                                            with our
                                             theme and target audience. <br>
-                                            Following this when developing the prototype I designed and scripted the UI system
+                                            Following this when developing the prototype I designed and scripted the UI
+                                            system
                                             for the player to spawn sheep, hide
                                             them from the farmer, and move between scenes. <br>
-                                            When the prototype was ready to be built Saul and I worked together to get the iOS
+                                            When the prototype was ready to be built Saul and I worked together to get
+                                            the iOS
                                             build ready, and I also built and
                                             Android verison to look for platform specific issues that might be worth
                                             investigating. <br>
-                                            I also designed and edited the Game Design Document from scratch in Microsoft Office
+                                            I also designed and edited the Game Design Document from scratch in
+                                            Microsoft Office
                                             Publisher.
                                         </p>
                                     </div>
@@ -1793,24 +1800,31 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">One of the core inspirations for the feel of our prototype
+                                        <p style=" font-size: large;">One of the core inspirations for the feel of our
+                                            prototype
                                             is <a class="grey-text text-darken-3" style="text-decoration: underline;"
                                                 href="https://ninjakiwi.com/Games/Tower-Defense/Bloons-Tower-Defense.html"
                                                 target="_blank">Bloons Tower Defense</a>
-                                            an Adobe Flash game based around popping balloons before they reached the end of the
+                                            an Adobe Flash game based around popping balloons before they reached the
+                                            end of the
                                             path. This mechanic
-                                            of preventing an object from reaching its destination forms the core of A Porky
+                                            of preventing an object from reaching its destination forms the core of A
+                                            Porky
                                             Predicament’s gameplay,
-                                            as we intended for strategic placement to be necessary to succeed. We also took
+                                            as we intended for strategic placement to be necessary to succeed. We also
+                                            took
                                             inspiration from Bloon’s
                                             introduction of more enemies in later levels.<br><br>
                                             We also took some cues from <a class="grey-text text-darken-3"
                                                 style="text-decoration: underline;"
                                                 href="https://www.ea.com/studios/popcap/plants-vs-zombies"
-                                                target="_blank">Plants vs Zombies</a>, a game in which the enemy characters
-                                            have a variety of attributes that allow gameplay to remain fresh between levels, and
+                                                target="_blank">Plants vs Zombies</a>, a game in which the enemy
+                                            characters
+                                            have a variety of attributes that allow gameplay to remain fresh between
+                                            levels, and
                                             encouraging careful
-                                            strategy to win. We planned a system similar to Plants vs Zombies’ “Sun” currency,
+                                            strategy to win. We planned a system similar to Plants vs Zombies’ “Sun”
+                                            currency,
                                             where the player would
                                             have limited resources for each level.
                                         </p>
@@ -1825,22 +1839,31 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">The prototype contains most of the core gameplay mechanics
+                                        <p style=" font-size: large;">The prototype contains most of the core gameplay
+                                            mechanics
                                             we included in our pitch to Aardman.
-                                            Once the player presses “start” they have 25 seconds seconds to position their sheep
+                                            Once the player presses “start” they have 25 seconds seconds to position
+                                            their sheep
                                             assets to bar the path of the pigs,
-                                            which begin moving up from the barn when the preparation time is over.<br><br>
-                                            If the player has positioned the sheep poorly then the pigs will reach the farmhouse
+                                            which begin moving up from the barn when the preparation time is
+                                            over.<br><br>
+                                            If the player has positioned the sheep poorly then the pigs will reach the
+                                            farmhouse
                                             and alert the farmer to the animals’
-                                            human behaviour. If the player places their sheep well the pigs won’t reach the
+                                            human behaviour. If the player places their sheep well the pigs won’t reach
+                                            the
                                             farmhouse in time, however the player must
-                                            still press the “Bitzer” button to remove their sheep from the field before the
+                                            still press the “Bitzer” button to remove their sheep from the field before
+                                            the
                                             farmer comes out and sees.<br><br>
-                                            In the current build the player has access to four sheep: Shirley, who is large
+                                            In the current build the player has access to four sheep: Shirley, who is
+                                            large
                                             enough to block the path but who can be
-                                            moved by the pigs after a few second; Timmy, who slows down the pigs by crying
+                                            moved by the pigs after a few second; Timmy, who slows down the pigs by
+                                            crying
                                             loudly; Timmy’s Mother, who lays down a yarn
-                                            tripwire that knocks pigs out; and Nuts, who is mad enough to charge straight at the
+                                            tripwire that knocks pigs out; and Nuts, who is mad enough to charge
+                                            straight at the
                                             pigs and knock them off the screen.
                                         </p>
                                     </div>
@@ -1854,28 +1877,38 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">Although the game seems very basic and cumbersome I am
+                                        <p style=" font-size: large;">Although the game seems very basic and cumbersome
+                                            I am
                                             very satisfied with the progress we
-                                            made with it as a prototype. I feel that the decision to work on the concept as a
+                                            made with it as a prototype. I feel that the decision to work on the concept
+                                            as a
                                             grey box prototype allowed us to focus
-                                            more on getting the essential mechanics in place, though I would have liked to make
+                                            more on getting the essential mechanics in place, though I would have liked
+                                            to make
                                             the game look nicer before showing it off.
-                                            I think if we had decided to try and produce something closer to a release ready
+                                            I think if we had decided to try and produce something closer to a release
+                                            ready
                                             version the art side of the team would have had
                                             the opportunity to contribute more to the prototype itself rather than just
                                             generating additional concept art on the side.<br><br>
-                                            The major technical let down we faced with this project is the way the player
+                                            The major technical let down we faced with this project is the way the
+                                            player
                                             positions sheep, we originally intended for this to be
-                                            a grid system with predefined positions on and to either side of the path, however
+                                            a grid system with predefined positions on and to either side of the path,
+                                            however
                                             we were unable to get this system working, and the
-                                            partial version that Sam helped us with became too broken to work with when we tried
+                                            partial version that Sam helped us with became too broken to work with when
+                                            we tried
                                             to extend it, so we rolled back to an earlier
-                                            project version and started over with the current system. If we were going to
+                                            project version and started over with the current system. If we were going
+                                            to
                                             continue this project with Aardman I would prioritise
-                                            getting that mechanic working first, as I feel that the current method of freely
+                                            getting that mechanic working first, as I feel that the current method of
+                                            freely
                                             dragging objects around negatively impacts how enjoyable
                                             the game is in its current form. <br><br>
-                                            I feel that while we worked well as a team the project could have been managed a
+                                            I feel that while we worked well as a team the project could have been
+                                            managed a
                                             little better, with more emphasis on using the agile system
                                             and having a clear roadmap, rather than focusing on one problem at a time.
                                         </p>
@@ -1884,40 +1917,47 @@
                             </ul>
                         </div>
                     </div>
-        
+
                 </section>
             </div>
 
-            <div class="card grey lighten-2" style="display: none;" id="todd">
+            <div class="card" style="display: none; background-color: rgba(220, 220, 220, 0.9);" id="todd">
                 <div class="card-image">
                     <img class="responsive-img" src="./images/todd.png" alt="Todd Howard Title">
+                    <button class="halfway-fab btn-floating btn-large card-detail right black tooltipped"
+                        data-tooltip="Made with Unity">
+                        <i class="fab fa-unity"></i>
+                    </button>
                 </div>
 
                 <section class="container section scrollspy" id="">
 
                     <div class="row center hide-on-med-and-down">
                         <br>
-                        <a class="" style="color: #fa5c5c;" href="https://joel-robinson.itch.io/todd-howard-is-going-to-be-late"
-                            target="_blank">
+                        <a class="" style="color: #fa5c5c;"
+                            href="https://joel-robinson.itch.io/todd-howard-is-going-to-be-late" target="_blank">
                             <i class="fab fa-itch-io medium"></i><span class="" style="font-size: xx-large;"> Play on
                                 itch.io</span>
                         </a>
                         <br><br>
                     </div>
-        
+
                     <div class="row grey-text text-darken-3" style="text-align: left;">
                         <div class="col s12 l12" style="border-radius: 8px;">
-                            <p style=" font-size: large;">This game began as a hasty attempt to hand something in when I lost
+                            <p style=" font-size: large;">This game began as a hasty attempt to hand something in when I
+                                lost
                                 all the files to my
                                 originally planned narrative game.
-                                I took a 3D model of my bedroom that I had worked on for another assignment into Unity and added
+                                I took a 3D model of my bedroom that I had worked on for another assignment into Unity
+                                and added
                                 a simple fetch quest.
-                                I chose to theme the game around Bethesda's Todd Howard as Fallout 76 had just come out and I
+                                I chose to theme the game around Bethesda's Todd Howard as Fallout 76 had just come out
+                                and I
                                 had a lot of feelings that
                                 needed venting about the whole thing.<br><br>
                             </p>
                         </div>
-        
+
                         <div class="col s12 l8 offset-l2">
                             <div class="card">
                                 <div class="card-image">
@@ -1929,15 +1969,16 @@
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <p>This playthrough of the game highlights some of the logarithmic fall-off I experimented
+                                    <p>This playthrough of the game highlights some of the logarithmic fall-off I
+                                        experimented
                                         with.</p>
                                 </div>
                             </div>
-        
-        
+
+
                         </div>
                     </div>
-        
+
                     <div class="row grey-text text-darken-3" style="text-align: left;">
                         <div class="col s12 l12">
                             <ul class="collapsible z-depth-0" style="border-width: 0px;">
@@ -1949,7 +1990,8 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">This game is an escape room style 3D game where the player
+                                        <p style=" font-size: large;">This game is an escape room style 3D game where
+                                            the player
                                             must collect the character’s possessions
                                             from around the room and leave. The game contains a variety of environmental
                                             storytelling elements that rely on niche context
@@ -1960,15 +2002,20 @@
                                                 class="grey-text text-darken-3" style="text-decoration: underline;"
                                                 href="https://www.thechineseroom.co.uk/games/everybodys-gone-to-the-rapture"
                                                 target="_blank">Everybody's Gone to the Rapture</a>. However,
-                                            the theme of the game is mocking Todd Howard, Bethesda’s Creative Director and a
+                                            the theme of the game is mocking Todd Howard, Bethesda’s Creative Director
+                                            and a
                                             nexus of internet meme activity.<br>
-                                            The environmental assets for this game were created from scratch using Autodesk 3DS
+                                            The environmental assets for this game were created from scratch using
+                                            Autodesk 3DS
                                             Max. Each object was also uniquely textured
-                                            using Substance Painter. As I had already made these assets, I considered building
+                                            using Substance Painter. As I had already made these assets, I considered
+                                            building
                                             on the environment to create a large playing
-                                            space and give the player more to do, however I felt that expanding the area beyond
+                                            space and give the player more to do, however I felt that expanding the area
+                                            beyond
                                             one room did not offer enough opportunity to
-                                            improve on game mechanics to be worth the time needed to design additional assets.
+                                            improve on game mechanics to be worth the time needed to design additional
+                                            assets.
                                         </p>
                                     </div>
                                 </li>
@@ -1981,26 +2028,35 @@
                                         </div>
                                     </div>
                                     <div class="collapsible-body grey lighten-2">
-                                        <p style=" font-size: large;">The scripts for this game are very simple. The Item script
+                                        <p style=" font-size: large;">The scripts for this game are very simple. The
+                                            Item script
                                             is attached to every object the
-                                            player needs to collect, and checks whether the player is in the object’s collider.
+                                            player needs to collect, and checks whether the player is in the object’s
+                                            collider.
                                             When the player is in the collider
-                                            the script displays a GUI element that prompts the player to pick the object up.
+                                            the script displays a GUI element that prompts the player to pick the object
+                                            up.
                                             When the player presses the appropriate
-                                            key, the object is destroyed, and the relevant <a class="grey-text text-darken-3"
-                                                style="text-decoration: underline;" href="https://fungusgames.com/"
-                                                target="_blank">Fungus</a> block is executed. The Game Manager script checks
+                                            key, the object is destroyed, and the relevant <a
+                                                class="grey-text text-darken-3" style="text-decoration: underline;"
+                                                href="https://fungusgames.com/" target="_blank">Fungus</a> block is
+                                            executed. The Game Manager script checks
                                             that all the
-                                            objects have been collected before prompting the player to exit the room with
+                                            objects have been collected before prompting the player to exit the room
+                                            with
                                             another Fungus block and deleting the Game
                                             Manager object.<br>
-                                            The room environment is surrounded by a reverb zone using the “room” preset, this
+                                            The room environment is surrounded by a reverb zone using the “room” preset,
+                                            this
                                             makes the audio elements played inside
-                                            the zone sound more like they’re coming from an interior space. The music coming
+                                            the zone sound more like they’re coming from an interior space. The music
+                                            coming
                                             from the desk area is set up with a
-                                            logarithmic rolloff that means it is audible throughout the whole room but gets
+                                            logarithmic rolloff that means it is audible throughout the whole room but
+                                            gets
                                             quieter further from the source.
-                                            The music playing behind the door uses a linear roll off that gives it a smaller
+                                            The music playing behind the door uses a linear roll off that gives it a
+                                            smaller
                                             range.
                                         </p>
                                     </div>
@@ -2016,20 +2072,24 @@
                                     <div class="collapsible-body grey lighten-2">
                                         <p style=" font-size: large;">I feel that as a piece of satire this game is very
                                             successful,
-                                            however as a narrative experience it doesn’t meet the standard that I aspire to. I
+                                            however as a narrative experience it doesn’t meet the standard that I aspire
+                                            to. I
                                             think
-                                            had there been time to recover my lost original project the narrative I had planned
+                                            had there been time to recover my lost original project the narrative I had
+                                            planned
                                             for it would
-                                            have better suited the requirements. I also feel that the room could benefit from
+                                            have better suited the requirements. I also feel that the room could benefit
+                                            from
                                             more interactivity
-                                            beyond the essential items. I do think that this game reaches a high level of visual
+                                            beyond the essential items. I do think that this game reaches a high level
+                                            of visual
                                             polish, due to all
                                             the models and textures being based off real life objects.
                                         </p>
                                     </div>
                                 </li>
                             </ul>
-        
+
                 </section>
             </div>
         </div>
