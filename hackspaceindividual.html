@@ -412,8 +412,125 @@
                 </div>
             </div>
 
+            <br>
 
+            <div class="col s12 l12">
+                <div class="card">
 
+                    <div class="card-content">
+                        <span class="card-title center" style="font-weight: 700; font-size: xx-large;">Progressive Web
+                            Apps</span>
+                        <br>
+                        <p>I had intended to develop this app in Construct, a Javascript based mobile game engine.
+                            However on further reflection I decided that the limitations of construct (such having to
+                            manually position elements) outweighed the benefit of my being familiar with the software.
+                            <br><br>
+                            To that end I made the decision to build Floriofeel as a Progressive Web App, I have had
+                            some experience developing the front end of a PWA before and so was able to quickly generate
+                            the interface almost exactly as I designed it in the user journey.
+                            <br><br>
+                            Using PWA technologies allows for easy testing and quick deployment between versions. It
+                            also presents an opportunity to learn more about Javascript and web technologies, a branch
+                            of development that I haven’t had much experience in previously.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l12">
+                <div class="card">
+
+                    <div class="card-content">
+                        <span class="card-title center"
+                            style="font-weight: 700; font-size: xx-large;">Development</span>
+                        <br>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l12">
+                <div class="card">
+
+                    <div class="card-content">
+                        <span class="card-title center" style="font-weight: 700; font-size: xx-large;">Database and
+                            Authentication</span>
+                        <br>
+                        <p>I decided to use Google’s Firebase database for the back end of the application, as it seems
+                            the easiest to learn of the options available to me. Firebase also includes functionality
+                            for user authentication alongside its database, making it the obvious choice for user
+                            accounts.
+                            <br><br>
+                            The database contains information about the nine flower options the user has to choose from,
+                            which are loaded into the app from the database whenever needed. Having this data stored
+                            there instead of locally in the app makes it easier for me to update or replace the
+                            information when necessary.
+                            <br><br>
+                        </p>
+
+                        <div class="row">
+                            <div class="col s12 l8 offset-l2">
+                                <div class="card grey darken-4">
+                                    <div class="card-image">
+                                        <img src="./images/blog/DBflowers.png" alt="">
+                                    </div>
+                                    <div class="card-content white-text">
+                                        <p style="font-size: small">The database structure for flower data.<br></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            The database also stores the users’ previous choices, so their history is persistent across
+                            devices when they’re logged in. I achieved this by creating a new document in the database
+                            whenever a user signs up, with the user’s UID token as the name of the document.
+                            <br><br>
+                            [I am aware from my research while developing this functionality that using the UID is not
+                            best practice, however I had issues using Firebase’s included GetToken() function, so for
+                            this prototype I simply chose to use something I knew would work.]
+                            <br><br>
+                            Whenever the user selects a flower from the homepage of the app it sends an update to the
+                            “history” collection saved in their document, with all the key information about the flower,
+                            as well as the time and date that they logged their feelings. The most important piece of
+                            data stored in each entry is a timestamp number with a “-” appended to the front. This
+                            allows me to sort by the timestamp when retrieving the user’s history, and have their data
+                            displayed newest to oldest.
+                            <br><br>
+                        </p>
+
+                        <div class="row">
+                            <div class="col s12 l8 offset-l2">
+                                <div class="card grey darken-4">
+                                    <div class="card-image">
+                                        <img src="./images/blog/DBuser.png" alt="">
+                                    </div>
+                                    <div class="card-content white-text">
+                                        <p style="font-size: small">An example of a user's history in the database.<br>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            When the user views their history a card is generated for each entry in their database
+                            document. They can open these cards to find a couple of functionality options.
+                            <br><br>
+                            If the user hasn’t written a note yet they will see a text area where they can add a note
+                            giving more detail about their feelings at that time. Once they’ve written a note it is
+                            pushed to the entry’s document in the database and displayed as normal text in the modal
+                            card. Existing notes can be edited using the pencil button.
+                            <br><br>
+                            The user can also delete entries from their history at any time using the red trash can
+                            button, this deletes the entry permanently from the database and reloads the history page.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
