@@ -119,19 +119,16 @@
 
 
             </div>
-            
+            -->
 
-            <div class="container">
+            <div class="container center">
 
-                <iframe class="center" src="https://itch.io/embed/800459" height="167" width="552" frameborder="0">
-                    <a href="https://joel-robinson.itch.io/character-relationship-generator">Character Relationship
-                        Generator by Joel Robinson
-                    </a>
-                </iframe>
+                <a class="button btn-large" style="background-color: #6A1B9A;"
+                    href="https://floriofeel.joelrobinson.co.uk/">Visit the Floriofeel App</a>
                 <br><br>
 
             </div>
-            -->
+
 
             <div class="col s12 l12">
                 <div class="card">
@@ -140,13 +137,31 @@
                         <span class="card-title center" style="font-weight: 700; font-size: xx-large;">Initial
                             Concept</span>
                         <br>
-                        <p>Floriofeel is a mood tracking app that uses imagery of flowers based on Victorian era
-                            floriology (the language and meanings of flowers). The user would be able to select the
-                            flower that represents their current feeling and be shown how many users had also felt that
-                            way in the last hour.
+                        <p>
+                            Floriofeel is a mood tracking app that uses imagery of flowers based on Victorian era
+                            floriology (the language and meanings of flowers). This concept is based on one I developed
+                            in the ideation session for the collaborative project, however it was sidelined as its link
+                            to “connection” was tenuous.
                             <br><br>
-                            This idea was generated in the ideation session for the collaborative project, however it
-                            was sidelined as its link to “connection” was tenuous.
+                            When I brought the concept back for this project I tried to identify how it would be used,
+                            when I first developed the idea in October the general plan was that the service would be a
+                            kind of anonymous messaging platform, where users would be connected based on the flower the
+                            had selected, and would be able to communicate with one another in small groups (I
+                            envisioned 2 to 10 people). Users would support one another through their mutually
+                            experienced feelings using predefined phrases or iconography.
+                            <br><br>
+                            On review of this concept I decided that users supporting one another would not be
+                            particularly constructive, and it would be essential to make sure the app could not be
+                            exploited to cause anyone harm. I was not confident that I could effectively design a system
+                            that would prevent this, nor that I could come to understand the fundamentals of peer to
+                            peer messaging services in the given timeframe.
+                            <br><br>
+                            As such I decided to focus on using the flower imagery for a self contained, personal mood
+                            tracking app. In this instance the user would use the app entirely for their own benefit, it
+                            would offer a quick and easy way to save the way they’re feeling at a certain time so they
+                            can reflect on it at their own pace. The user would be able to select the flower that
+                            represents their current feeling and be shown how many users had also felt that way in the
+                            last hour, they would also be able to add notes for their own reference.
                             <br><br>
                             Two of the modifiers lend themselves to this concept. “Monochrome” will guide the look and
                             feel of the app interface, while “elevate” led to the idea of the app giving users small
@@ -191,8 +206,13 @@
 
                         <p>
                             Once I had this core colour selected I put it into the Adobe Color palette tool and looked
-                            through the options it gave. The monochromatic palette ended up including a good range of
-                            shades that will give the app a consistent look while still having variety.
+                            through the options it gave. I did briefly consider the complementary palette, as it had a
+                            promising range of colours. However based on some of the feedback I received about the image
+                            the palette was extracted from I was afraid that the greens would cause the app to have the
+                            feel of a gardening focused app. I didn’t want to become too heavily entrenched in plant
+                            imagery, I only wanted the app to have a vaguely floral sense. I ended up choosing the
+                            monochrome pale including a good range of shades that will give the app a consistent look
+                            while still having variety.
                             <br><br>
                         </p>
 
@@ -364,8 +384,7 @@
                             Once the user has picked
                             their flower they proceed to a screen showing them how many other users felt this way
                             recently, from this page they can choose to read more about the flower or move on to the
-                            suggested activities (which I refer to as “nudges”). It may end up being more user friendly
-                            to include the nudges on the number display page, provided the list is fairly short.
+                            suggested activities (which I refer to as “nudges”).
                             <br><br>
                         </p>
 
@@ -377,6 +396,28 @@
                                     </div>
                                     <div class="card-content white-text">
                                         <p style="font-size: small">Number page, nudges page, and user history<br></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            Later on I decided to include the nudges on the same page as the number of other users who
+                            felt that way, as neither page had much content on it otherwise. I feel that this page ended
+                            up becoming one of the most important aspects of the app. It delivers the core value of the
+                            app to the user, and does so in an effective and appealing way.
+                            <br><br>
+                        </p>
+
+                        <div class="row">
+                            <div class="col s12 l4 offset-l4">
+                                <div class="card grey darken-4">
+                                    <div class="card-image">
+                                        <img src="./images/blog/nudges 2.0.png" alt="">
+                                    </div>
+                                    <div class="card-content white-text">
+                                        <p style="font-size: small">The revised nudges page, as seen in the final product.<br></p>
                                     </div>
 
                                 </div>
@@ -488,9 +529,10 @@
                             devices when they’re logged in. I achieved this by creating a new document in the database
                             whenever a user signs up, with the user’s UID token as the name of the document.
                             <br><br>
-                            [I am aware from my research while developing this functionality that using the UID is not
-                            best practice, however I had issues using Firebase’s included GetToken() function, so for
-                            this prototype I simply chose to use something I knew would work.]
+                            <i>I am aware from my research while developing this functionality that using the UID is not
+                                best practice, however I had issues using Firebase’s included GetToken() function, so
+                                for
+                                this prototype I simply chose to use something I knew would work.</i>
                             <br><br>
                             Whenever the user selects a flower from the homepage of the app it sends an update to the
                             “history” collection saved in their document, with all the key information about the flower,
