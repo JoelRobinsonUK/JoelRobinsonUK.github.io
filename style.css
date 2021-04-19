@@ -115,3 +115,21 @@ div#unityContainer {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+  .project{
+    width: 100%;
+    height: auto;
+  }
+
+  .play-link{
+    color: #fa5c5c;
+  }
+
+  .play{
+    font-size: xx-large;
+    
+  }
+
+  .abstract-text{
+    margin-top: 20px;
+  }

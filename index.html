@@ -64,37 +64,37 @@
                 </div>
 
                 <div class="col s12 l6">
-                    <div class="carousel carousel-slider center ">
-                        <a class="carousel-item modal-trigger" data-target="modal1" onclick="close()">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/trouble.png">
+                    <div class="carousel carousel-slider center" id="portfolio-list">
+                        <!-- <a class="carousel-item modal-trigger" data-target="modal1" onclick="close()">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/trouble.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/floriofeel.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/floriofeel.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/geoff.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/geoff.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/calling.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/calling.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/vrcade.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/vrcade.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/monster factory.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/monster factory.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/shaun.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/shaun.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/moon.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/moon.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/janus.png">
+                            <img class="center" style="height: auto; width: 100%;" src="../images/janus.png">
                         </a>
                         <a class="carousel-item">
-                            <img class="center" style="height: 100%; width: auto;" src="../images/todd.png">
-                        </a>
+                            <img class="center" style="height: auto; width: 100%;" src="../images/todd.png">
+                        </a> -->
                     </div>
 
                 </div>
@@ -330,10 +330,10 @@
             </section>
 
             <div id="modals">
-                <div id="modal1" class="card modal">
-                    <div class="card-image">
-                        <img src="./images/trouble.png" alt="">
-                    </div>
+                <div id="modal1" class="card modal"">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/W7wCJsnhhbs" frameborder="0" allowfullscreen></iframe>
+                      </div>
                     <div class="card-content">
                         <div class="row">
                             <div class="col s18 l8 offset-s2 offset-l2" style="border-radius: 8px;">
@@ -384,24 +384,43 @@
             }
         </style>
 
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyDOJ1W_N5Jy1bijRurvi8fd1nG9vn5DYmU",
+                authDomain: "joelrobinsonuk.firebaseapp.com",
+                projectId: "joelrobinsonuk",
+                storageBucket: "joelrobinsonuk.appspot.com",
+                messagingSenderId: "489136735775",
+                appId: "1:489136735775:web:a9219d35db96b87932f72a",
+                measurementId: "G-HDV74LL775"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            
+
+            const db = firebase.firestore();
+            db.settings({timestampsInSnapshots: true});
+
+            firebase.analytics();
+        </script>
+        <script src="./scripts/db.js"></script>
+
         <script src="https://www.youtube.com/iframe_api"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.modal').modal();
-                $('.sidenav').sidenav();
-                $('.collapsible').collapsible();
-                $('.carousel').carousel({
-                    indicators: true
-                });
-            });
-            $('.tooltipped').tooltip();
-            $('.scrollspy').scrollSpy();
-        </script>
-        <script src="scripts.js">
-        </script>
+        <script src="./scripts/jquery.js"></script>
 </body>
 
 </html>
