@@ -36,6 +36,7 @@
                 <ul class="right hide-on-med-and-down" style="font-weight: 100;">
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#cv">CV</a></li>
                 </ul>
             </div>
@@ -64,42 +65,50 @@
 
                 <div class="col s12 l6">
                     <div class="carousel carousel-slider center ">
-                        <a class="carousel-item" href="#one!" onclick="close()">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/trouble.png">
+                        <a class="carousel-item modal-trigger" data-target="modal1" onclick="close()">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/trouble.png">
                         </a>
-                        <a class="carousel-item" href="#two!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/geoff.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/floriofeel.png">
                         </a>
-                        <a class="carousel-item" href="#three!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/calling.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/geoff.png">
                         </a>
-                        <a class="carousel-item" href="#four!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/vrcade.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/calling.png">
                         </a>
-                        <a class="carousel-item" href="#five!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/monster factory.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/vrcade.png">
                         </a>
-                        <a class="carousel-item" href="#six!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/shaun.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/monster factory.png">
                         </a>
-                        <a class="carousel-item" href="#seven!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/moon.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/shaun.png">
                         </a>
-                        <a class="carousel-item" href="#eight!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/janus.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/moon.png">
                         </a>
-                        <a class="carousel-item" href="#nine!">
-                            <img class="center"style="height: auto; width: 75%;" src="../images/todd.png">
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/janus.png">
                         </a>
-                    </div>
-                    <br><br>
-                    <div class="center">
-                        <p style="font-size: x-large;">This is a description of the game</p>
+                        <a class="carousel-item">
+                            <img class="center" style="height: auto; width: 75%;" src="../images/todd.png">
+                        </a>
                     </div>
 
                 </div>
 
             </section>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l12">
+                        <br><br>
+                        <div class="divider grey"></div>
+                    </div>
+                </div>
+            </div>
 
             <section class="container section scrollspy" id="about">
 
@@ -140,15 +149,21 @@
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12 l12">
-                            <br><br>
-                            <div class="divider grey lighten-1"></div>
-                        </div>
+            </section>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l12">
+                        <br><br>
+                        <div class="divider grey"></div>
                     </div>
                 </div>
+            </div>
 
+            <section class="container section scrollspy" id="contact">
+                <div class="row center">
+                    <h2>Contact</h2>
+                </div>
                 <div class="row center">
                     <div class=" col s6 l3">
                         <a href="https://twitter.com/joelrobinson_uk" target="_blank">
@@ -192,8 +207,16 @@
                         </a>
                     </div>
                 </div>
-
             </section>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l12">
+                        <br><br>
+                        <div class="divider grey"></div>
+                    </div>
+                </div>
+            </div>
 
             <section class="container section scrollspy" id="cv">
                 <div class="row center">
@@ -306,47 +329,79 @@
 
             </section>
 
+            <div id="modals">
+                <div id="modal1" class="card modal">
+                    <div class="card-image">
+                        <img src="./images/trouble.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s18 l8 offset-s2 offset-l2" style="border-radius: 8px;">
+                                <p style=" font-size: large;">Trouble’s Brewing is a VR game about preparing potions to
+                                    fulfil
+                                    orders as quickly as possible.
+                                    In the game the player must experiment to discover the effects of ingredients at
+                                    their
+                                    disposal
+                                    and practice their technique
+                                    at chopping, stirring, and boiling to produce the highest quality potions.
+                                    Throughout
+                                    the game
+                                    the player will have the
+                                    opportunity to upgrade their equipment and explore the story of the town they work
+                                    in.<br><br>
+                                    We presented a working prototype at the Bristol VR Lab in June 2019, and although we
+                                    received
+                                    positive feedback I feel
+                                    that there is so much room to improve this project. <br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
 
 
 
-    <footer class=" footer page-footer grey darken-4">
-        <div class="container center-align">
-            <p>Website by me using Materialize 1.0.0, JQuery, and Font Awesome</p>
-        </div>
-        <div class="footer-copyright grey darken-4">
-            <div class="container center-align">&copy; 2020 Joel Robinson</div>
-        </div>
-    </footer>
+        <footer class=" footer page-footer grey darken-4">
+            <div class="container center-align">
+                <p>Website by me using Materialize 1.0.0, JQuery, and Font Awesome</p>
+            </div>
+            <div class="footer-copyright grey darken-4">
+                <div class="container center-align">&copy; 2020 Joel Robinson</div>
+            </div>
+        </footer>
 
-    <style>
-        .input-field input[type=text]:focus+label {
-            color: #4a148c;
-        }
+        <style>
+            .input-field input[type=text]:focus+label {
+                color: #4a148c;
+            }
 
-        .input-field .prefix.active {
-            color: #4a148c;
-        }
-    </style>
+            .input-field .prefix.active {
+                color: #4a148c;
+            }
+        </style>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-            $('.collapsible').collapsible();
-            $('.carousel').carousel({
-                indicators: true
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.modal').modal();
+                $('.sidenav').sidenav();
+                $('.collapsible').collapsible();
+                $('.carousel').carousel({
+                    indicators: true
+                });
             });
-        });
-        $('.tooltipped').tooltip();
-        $('.scrollspy').scrollSpy();
-    </script>
-    <script src="scripts.js">
-    </script>
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+        </script>
+        <script src="scripts.js">
+        </script>
 </body>
 
 </html>
