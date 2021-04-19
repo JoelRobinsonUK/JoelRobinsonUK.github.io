@@ -39,6 +39,7 @@ function addProject(doc) {
 
     let img = document.createElement('img');
     img.setAttribute('class', "project");
+    img.setAttribute('style', "height: 100%; width: auto;");
     img.setAttribute('alt', "trouble");
     img.setAttribute('src', doc.data().image);
 

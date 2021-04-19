@@ -117,8 +117,8 @@ div#unityContainer {
   }
 
   .project{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 
   .play-link{
