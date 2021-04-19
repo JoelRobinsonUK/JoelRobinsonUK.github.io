@@ -1,8 +1,9 @@
 
 body{
-    background-image: url(./images/banner.png);
-    background-repeat: repeat-y;
-    background-size: cover;
+  background-color: #45364B;
+    background-image: url(./images/favicon.png);
+    background-repeat: repeat;
+    background-size: 8%;
     background-attachment: fixed;
 }
 
