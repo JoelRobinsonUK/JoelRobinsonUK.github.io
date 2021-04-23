@@ -1,9 +1,8 @@
 
 body{
-  background-color: #45364B;
-    background-image: url(./images/favicon.png);
-    background-repeat: repeat;
-    background-size: 8%;
+    background-image: url(./images/banner.png);
+    background-repeat: repeat-y;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -88,55 +87,3 @@ div#unityContainer {
   .side-style{
     background-color: grey;
   }
-<<<<<<< HEAD
-
-  .portfolio::-webkit-scrollbar{
-    display: none;
-  }
-
-  .portfolio{
-    overflow: hidden;
-    height: 100%;
-    overflow-y: scroll;
-    position: fixed;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  .base{
-    opacity: 80%;
-  }
-
-  .modal::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .modal {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  .project{
-    width: auto;
-    height: 100%;
-  }
-
-  .play-link{
-    color: #fa5c5c;
-  }
-
-  .link{
-    color: #6A1B9A;
-  }
-
-  .play{
-    font-size: xx-large;
-    
-  }
-
-  .abstract-text{
-    margin-top: 20px;
-  }
-=======
->>>>>>> parent of 5d73242 (Major update)
