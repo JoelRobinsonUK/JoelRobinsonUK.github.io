@@ -82,16 +82,16 @@ function addProject(doc) {
     if(doc.data().itch){
         let link = document.createElement('a');
         link.setAttribute('class', "play-link center")
-        link.setAttribute('href', doc.data().link);
+        link.setAttribute('href', doc.data().itch);
 
-        let itch = document.createElement('i');
-        itch.setAttribute('class', "fab fa-itch-io medium");
+        let icon = document.createElement('i');
+        icon.setAttribute('class', "fab fa-itch-io medium");
 
         let span = document.createElement('span');
         span.setAttribute('class', "play");
         span.textContent = " Play on itch.io";
 
-        link.appendChild(itch);
+        link.appendChild(icon);
         link.appendChild(span);
 
         abstract.appendChild(link);
