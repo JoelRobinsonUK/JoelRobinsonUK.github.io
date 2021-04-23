@@ -7,6 +7,10 @@ body{
     background-attachment: fixed;
 }
 
+.base{
+  max-width: 1500px;
+}
+
 p{
     font-weight: 300;
     font-size: medium;
