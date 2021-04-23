@@ -79,7 +79,7 @@ function addProject(doc) {
         abstract.appendChild(p);
     });
 
-    if(doc.data().link){
+    if(doc.data().itch){
         let link = document.createElement('a');
         link.setAttribute('class', "play-link center")
         link.setAttribute('href', doc.data().link);
@@ -90,6 +90,24 @@ function addProject(doc) {
         let span = document.createElement('span');
         span.setAttribute('class', "play");
         span.textContent = " Play on itch.io";
+
+        link.appendChild(itch);
+        link.appendChild(span);
+
+        abstract.appendChild(link);
+    }
+
+    if(doc.data().link){
+        let link = document.createElement('a');
+        link.setAttribute('class', "link center")
+        link.setAttribute('href', doc.data().link);
+
+        let itch = document.createElement('i');
+        itch.setAttribute('class', "fas fa-external-link-alt");
+
+        let span = document.createElement('span');
+        span.setAttribute('class', "play");
+        span.textContent = " Visit the Project Site";
 
         link.appendChild(itch);
         link.appendChild(span);
