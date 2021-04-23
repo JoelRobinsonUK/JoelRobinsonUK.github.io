@@ -88,6 +88,7 @@ div#unityContainer {
   .side-style{
     background-color: grey;
   }
+<<<<<<< HEAD
 
   .portfolio::-webkit-scrollbar{
     display: none;
@@ -137,3 +138,5 @@ div#unityContainer {
   .abstract-text{
     margin-top: 20px;
   }
+=======
+>>>>>>> parent of 5d73242 (Major update)
