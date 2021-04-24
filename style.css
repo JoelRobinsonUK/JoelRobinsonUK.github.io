@@ -8,12 +8,13 @@ body{
 }
 
 .base{
+  background-color: rgba(224, 224, 224, 0.9);
   max-width: 1500px;
 }
 
 p{
     font-weight: 300;
-    font-size: medium;
+    font-size: large;
 }
 
 .card-title{
