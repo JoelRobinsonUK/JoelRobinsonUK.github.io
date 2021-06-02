@@ -393,7 +393,7 @@
                                 <br><br>
                                 As previously mentioned Trouble’s Brewing was originally a VR game and over the course
                                 of developing this non-VR version I began to see that it would play much better on its
-                                original platform. 
+                                original platform.
                                 <br><br>
                                 In lieu of being able to develop for VR I decided to deploy Trouble’s
                                 Brewing via Unity WebGL, for a couple of reasons. The first is that it makes testing
@@ -403,6 +403,189 @@
                                 without the support of a publisher much easier, and comes without the costs associated
                                 with Steam and other mainstream platforms.
 
+                                <br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l12">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="card-content">
+                            <span class="card-title center"
+                                style="font-weight: 700; font-size: xx-large;">Implementation</span>
+                            <br>
+                            <h5>Player interactions</h5>
+                            <br>
+                            <p>
+                                The most complex aspect of developing Trouble’s Brewing was designing an effective
+                                method of interacting with objects, as the previous version was in VR and this was
+                                handled by Unity directly.
+                                <br><br>
+                                A raycast from the main camera detects objects on a layer labeled “Interactable”, when
+                                it collides with such an object it identifies the object’s tag. The tag is fed into a
+                                switch statement, which then locates the appropriate script on the object and executes
+                                code based on input from player keypresses. Whether the keypress is identified in the
+                                switch statement or in the discrete object script depends on the particular function.
+                                <br><br>
+                            </p>
+
+                            <div class="card grey darken-4 white-text">
+                                <div class="card-image">
+                                    <div class="responsive-img">
+                                        <img src="./images/TBBlog/playerint.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    The first case of the player interaction switch
+                                </div>
+                            </div>
+                            <p>
+                                <br>
+                                A second switch statement handles the player interacting with one object while holding
+                                another. As I have only accounted for interacting with objects while holding another
+                                with an appropriate function, there are some points where the game is not user friendly
+                                (ie: if the player tries to drop the knife, while looking at any other tool or object,
+                                it will not drop).
+                                <br><br>
+                                Originally I had written all object interactions in the main interaction script, however
+                                as I began to add more objects that could be interacted with I realized that this was
+                                not best practice, and separated each case of the switch statement into discrete scripts
+                                attached directly to the appropriate object.
+                                <br><br>
+                            </p>
+                            <h5>Potion Brewing</h5>
+                            <br>
+                            <p>
+                                When taken from the jar ingredients have a quality of 1, when they are chopped the
+                                prefab object representing the chopped version will be loaded and the original
+                                ingredient will be destroyed. This chopped version has a quality value of 2 and a
+                                reference to the minced version. This continues to a powdered, and then a distilled
+                                version of each ingredient, each with a higher quality value.
+                                <br><br>
+                                The ingredients have four strings stored in an attached script, depending on the base
+                                liquid the ingredient is added to the correct string will be added to the cauldron’s
+                                script.
+                                <br><br>
+                                The three cauldron objects have a script attached to them with fields for a number of
+                                variables. As the player interacts with the cauldron while holding a liquid or
+                                ingredient these fields are populated with the appropriate data so that the cauldron can
+                                track what the player is making, for example when the player puts water in the cauldron
+                                the string variable “type” will be set to “Potion”.
+                                <br><br>
+                                After the first ingredient is added the cauldron will not accept more until the player
+                                places it inside the fireplace and interacts with it while holding the spoon. This will
+                                trigger the colour of the cauldron liquid to change to that of the ingredient, and will
+                                change the name of the cauldron based on what liquid and ingredient was combined.
+                                <br><br>
+                            </p>
+
+                            <div class="card grey darken-4 white-text">
+                                <div class="card-image">
+                                    <div class="responsive-img">
+                                        <img src="./images/TBBlog/newpotion.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    The function for generating a new potion object
+                                </div>
+                            </div>
+                            <p>
+                                <br>
+                                When the player presses R while looking at a ready cauldron one of four prefab objects
+                                will be instantiated, based on what type of potion the player has brewed. The shape of
+                                the bottle will be determined by the base liquid, and the colour will be determined by
+                                the main ingredient. I considered adding a particle effect to denote the modifier,
+                                however I did not consider it a priority. The quality of this final potion is the
+                                average of the quality of the main and any modifier ingredient.
+                                <br><br>
+                            </p>
+                            <h5>Contracts</h5>
+                            <br>
+                            <p>
+                                Every in game hour a new contract is generated for the player to complete. There are two
+                                kinds of contracts in Trouble’s Brewing, story quests and randomly generated filler.
+                                Only one story contract is generated per day, and it could be any of the twelve that the
+                                player receives.
+                                <br><br>
+                                There is an array of story contract content attached to the contract manager game
+                                object, which I implemented by writing a serializable class for story contracts
+                                containing fields for the required potion and amount needed, a reward value, a name for
+                                the contract’s author, and a custom body text. As such I am able to dynamically resize
+                                this array to add new story contracts. When a story contract is generated the contract
+                                manager script finds the index matching the current in game day and populates a newly
+                                instantiated contract object with the curated data.
+                                <br><br>
+                                When a random contract is created the same thing happens, but the data is selected
+                                randomly from arrays of character names, potion types and effects, or from a random
+                                range for numerical values.
+                                <br><br>
+                            </p>
+
+                            <div class="card grey darken-4 white-text">
+                                <div class="card-image">
+                                    <div class="responsive-img">
+                                        <img src="./images/TBBlog/newcontract.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    Part of the script to generate a new random contract
+                                </div>
+                            </div>
+                            <p>
+                                <br>
+                                When the player completes a contract their reward depends first on accuracy. If none of
+                                the names of the potions they submit do not match the one asked for they receive
+                                nothing. If some do, they receive that fraction of their reward. If all the potions
+                                match they will be given their reward, multiplied by the average quality of the potions.
+                                <br><br>
+                            </p>
+                            <h5>Narrative</h5>
+                            <br>
+                            <p>
+                                The narrative of the game is attached to the story contracts. Each one has two strings
+                                included within the class. The first is a positive outcome, and if the player completes
+                                the contract properly the following day the town crier will display this text. If the
+                                player fails the contract, or does not complete it at all, the town crier will display
+                                the negative outcome.
+                                <br><br>
+                                The narrative is linear, so the player has no real control over the direction of the
+                                story, only over individual beats and minor outcomes.
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l12">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="card-content">
+                            <span class="card-title center"
+                                style="font-weight: 700; font-size: xx-large;">Reflection</span>
+                            <br>
+                            <p>
+                                Ultimately I am dissatisfied with this iteration of Trouble’s Brewing. I feel that
+                                design decisions I made early in the development process have limited my ability to
+                                really show the world and story that should have been the focus of this module. In
+                                particular my implementation of object interaction is rough and hampers the gameplay
+                                experience significantly. However this game was conceived as a virtual reality
+                                experience, where the rules for interaction and input are fundamentally different, and
+                                teething issues were expected from the start.
+                                <br><br>
+                                Technically I feel my work on this project has been a mixed bag, where I have had many
+                                successes in implementing gameplay mechanics I have never used before, such as raycasts
+                                and saving; but found myself limited by an inability to overcome or even understand a
+                                number of bugs.
+                                <br><br>
+                                This process has given me the opportunity to further refine the gameplay loop of
+                                Trouble’s Brewing and identify an audience that I can target it towards, an aspect of
+                                game design I have previously given little thought to.
+                                <br><br>
+                                I remain confident in the core concept of Trouble’s Brewing, and believe that fully
+                                realised as a VR experience the game would find a strong audience. I also feel that the
+                                direction I’ve taken for narrative exploration in this game is novel and offers room to
+                                create something never before seen, but that it needs a more immersive and less unwieldy
+                                experience to convey it.
                                 <br><br>
                             </p>
                         </div>
